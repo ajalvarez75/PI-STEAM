@@ -51,4 +51,4 @@ The deployment process involved the following steps:
 - **Final Deployment:** The service is now running at [https://pi-steam-render.onrender.com/docs](https://pi-steam-render.onrender.com/docs).
 
 ## Video
-A brief explanation of this project, showcasing the API's functionality, is available in [this video](insert_video_link_here).
+A brief explanation of this project, showcasing the API's functionality, is available in [this video](https://youtu.be/l54r0iMK0rE).
