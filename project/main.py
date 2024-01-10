@@ -8,9 +8,9 @@ app = FastAPI()
 # uvicorn main:app --reload
 
 # carga de archivos
-df_function_1_2 =  pd.read_csv('project/datasets/function_1_2.csv')
-df_function_3_4_5 = pd.read_csv('project/datasets/function_3_4_5.csv')
-df_function_item_item = pd.read_csv('project/datasets/function_item_item.csv')
+df_function_1_2 =  pd.read_csv('datasets/function_1_2.csv')
+df_function_3_4_5 = pd.read_csv('datasets/function_3_4_5.csv')
+df_function_item_item = pd.read_csv('datasets/function_item_item.csv')
 
 # First function.
 @app.get("/PlayTimeGenre/{genre}")
