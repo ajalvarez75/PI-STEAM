@@ -3,14 +3,22 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
+from pathlib import Path
+import os
 
 app = FastAPI()
 # uvicorn main:app --reload
 
-# carga de archivos
-df_function_1_2 =  pd.read_csv('datasets/function_1_2.csv')
-df_function_3_4_5 = pd.read_csv('datasets/function_3_4_5.csv')
-df_function_item_item = pd.read_csv('datasets/function_item_item.csv')
+# Configure file paths using environment variables
+DATA_DIR = os.getenv('DATA_DIR', 'datasets')
+FUNCTION_1_2_FILE = os.path.join(DATA_DIR, 'function_1_2.csv')
+FUNCTION_3_4_5_FILE = os.path.join(DATA_DIR, 'function_3_4_5.csv')
+FUNCTION_ITEM_ITEM_FILE = os.path.join(DATA_DIR, 'function_item_item.csv')
+
+# Load files
+df_function_1_2 = pd.read_csv(FUNCTION_1_2_FILE)
+df_function_3_4_5 = pd.read_csv(FUNCTION_3_4_5_FILE)
+df_function_item_item = pd.read_csv(FUNCTION_ITEM_ITEM_FILE)
 
 # First function.
 @app.get("/PlayTimeGenre/{genre}")

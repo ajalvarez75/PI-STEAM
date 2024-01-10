@@ -16,6 +16,7 @@ matplotlib==3.8.2
 numpy==1.26.2
 packaging==23.2
 pandas==2.1.4
+pathlib==1.0.1
 pillow==10.2.0
 pydantic==2.5.3
 pydantic_core==2.14.6
